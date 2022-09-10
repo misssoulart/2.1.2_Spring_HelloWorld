@@ -11,4 +11,12 @@ public class AppConfig {
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+    // код здесь (по аналогии, создайте бин с именем “cat”)
+    @Bean(name = "cat")
+    @Scope("prototype")
+    public Cat getCat() {
+        Cat cat = new Cat();
+        cat.setSay("Meow-meow");
+        return cat;
+    }
 }
